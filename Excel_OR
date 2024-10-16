@@ -1,0 +1,39 @@
+### CSV Data:
+
+| Name       | Age | Marks | Attendance | Sales  | Total Items Sold | Date       |
+|------------|-----|-------|------------|--------|------------------|------------|
+| John Smith | 23  | 78    | 80%        | 1200   | 45               | 2024-10-10 |
+| Jane Doe   | 22  | 35    | 60%        | 800    | 60               | 2023-09-01 |
+| Sam Green  | 24  | 90    | 90%        | 1100   | 40               | 2024-05-20 |
+| Emma White | 21  | 40    | 85%        | 950    | 55               | 2024-01-15 |
+| Alex Brown | 22  | 55    | 70%        | 600    | 70               | 2022-11-05 |
+
+1. How would you use an **AND** condition to check if both conditions (e.g., a value is greater than 50 and less than 100) are met in Excel?
+=AND(A1 > 50, A1 < 100)
+
+2. How do you use an **OR** condition to check if a value is either greater than 100 or less than 50 in Excel?
+=OR(A1 > 100, A1 < 50)
+
+3. Use an **AND** function to check if a student has passed, where passing requires a mark greater than 40 and attendance above 75%.
+=AND(C2 > 40, VALUE(LEFT(D2, LEN(D2) - 1)) > 75)
+
+4. How can you apply an **OR** condition to check if a number is either even or greater than 100?
+=OR(MOD(A1, 2) = 0, A1 > 100)
+
+5. Write an **AND** formula to check if both conditions (e.g., a value in one cell is greater than 10 and another is less than 20) are true.
+=AND(A1 > 10, B1 < 20)
+
+6. How do you use **OR** to check if a date is either before 2024 or after 2025 in Excel?
+=OR(A1 < DATE(2024, 1, 1), A1 > DATE(2025, 12, 31))
+
+7. How would you nest **AND** and **OR** conditions to check if a value is either greater than 80 or between 50 and 70?
+=OR(A1 > 80, AND(A1 >= 50, A1 <= 70))
+
+8. Use an **AND** condition to ensure that both fields (e.g., Name and Age) are not blank, returning "Complete" if both are filled.
+=IF(AND(A1 <> "", B1 <> ""), "Complete", "Incomplete")
+
+9. Write an **OR** formula to check if sales exceed $1,000 or if the total number of items sold is greater than 50.
+=OR(E1 > 1000, F1 > 50)
+
+10. How do you combine **AND** and **OR** conditions to check if either one condition is true (e.g., a name starts with "A") and another is true (e.g., age is greater than 20)?
+=AND(LEFT(A1, 1) = "A", B1 > 20)
