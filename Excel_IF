@@ -1,0 +1,40 @@
+### CSV Data:
+
+| Name       | Age | Marks | Sales  | Date       |
+|------------|-----|-------|--------|------------|
+| John Smith | 23  | 78    | 1200   | 2024-10-10 |
+| Jane Doe   | 22  | 35    | 800    | 2023-09-01 |
+| Sam Green  | 24  | 90    | 1100   | 2024-05-20 |
+| Emma White | 21  | 40    | 950    | 2024-01-15 |
+| Alex Brown | 22  | 55    | 600    | 2022-11-05 |
+
+
+Check if Marks are Greater than 50 (for John Smith in row 2):
+=IF(C2 > 50, "True", "False")
+
+Check if Marks contain "Pass" (assuming a passing mark is 40):
+=IF(C2 >= 40, "Successful", "Unsuccessful")
+
+Determine if a Student has Passed (for each student):
+=IF(C2 < 40, "Fail", "Pass")
+
+Check if Sales are Even or Odd (for John Smith):
+=IF(MOD(D2, 2) = 0, "Yes", "No")
+
+Check if Sales in D2 Equal Sales in D3 (for comparison):
+=IF(D2 = D3, "Match", "No Match")
+
+Check if Date is Before January 1, 2024 (for each student):
+=IF(E2 < DATE(2024, 1, 1), "Expired", "Valid")
+
+Nested IF for Marks to Display "High", "Medium", or "Low":
+=IF(C2 > 70, "High", IF(C2 >= 40, "Medium", "Low"))
+
+Check if Age is Blank:
+=IF(ISBLANK(B2), "No Data", B2)
+
+Calculate Bonus Based on Sales (for John Smith):
+=IF(D2 > 1000, D2 * 0.1, "No Bonus")
+
+Check if Name Starts with "A":
+=IF(LEFT(A2, 1) = "A", "Starts with A", "Other")
